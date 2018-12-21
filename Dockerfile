@@ -15,4 +15,5 @@ RUN npm run build
 # run phase - dumping everything from the previous step and copying only we need
 # nginx will take care the rest
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
